@@ -6,7 +6,7 @@ VSCode extension that adds much needed functionality of only copying non collaps
 
 Right click to see the command in the menu or Ctrl + Shift + C. This overrides any existing shortcut for Ctrl + shift + c
 
-\!\[Right Click\]\(images/image.png\)
+![Right Click](images/image.png)
 
 > Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
