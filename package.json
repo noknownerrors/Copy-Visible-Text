@@ -2,7 +2,7 @@
   "name": "copy-visible-text",
   "displayName": "copy-visible-text",
   "description": "When copying text, ignore collapsed sections. Useful for sharing code or pasting code into an llm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "noknownerrors",
   "repository": {
     "type": "git",
