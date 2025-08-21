@@ -11,11 +11,22 @@ export function activate(context: vscode.ExtensionContext) {
 
                 // Get all visible ranges that intersect with the selection
                 const intersectingRanges = visibleRanges.filter(range => range.intersection(selection));
+                
+                let eolStr = '\n';
+                switch (editor.document.eol) {
+                    case vscode.EndOfLine.CRLF:
+                        eolStr = '\r\n';
+                        break;
+                }
 
                 for (const range of intersectingRanges) {
                     const intersectionRange = range.intersection(selection);
                     if (intersectionRange) {
-                        visibleText += editor.document.getText(intersectionRange);
+                        let intersectText = editor.document.getText(intersectionRange);
+                        if (!(intersectText.endsWith('\n') || intersectText.endsWith('\r\n'))) {
+                            intersectText += eolStr;
+                        }
+                        visibleText += intersectText;
                     }
                 }
 
